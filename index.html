@@ -21,42 +21,14 @@
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
     </script>
 </head>
-<body>
+<body class="vi-mode">
 
     <!-- Ambient Glowing Backgrounds -->
     <div class="bg-glow bg-glow-1"></div>
     <div class="bg-glow bg-glow-2"></div>
 
-    <!-- Navigation Header -->
-    <header>
-        <div class="nav-container">
-            <a href="#home" class="logo" id="nav-logo">
-                <i class='bx bx-code-alt'></i> TriDev
-            </a>
-            
-            <nav>
-                <ul class="nav-menu" id="nav-menu">
-                    <li><a href="#home" class="nav-link active" id="link-home">Trang chủ</a></li>
-                    <li><a href="#about" class="nav-link" id="link-about">Giới thiệu</a></li>
-                    <li><a href="#skills" class="nav-link" id="link-skills">Kỹ năng</a></li>
-                    <li><a href="#experience" class="nav-link" id="link-experience">Kinh nghiệm</a></li>
-                    <li><a href="#projects" class="nav-link" id="link-projects">Dự án</a></li>
-                    <li><a href="#certs" class="nav-link" id="link-certs">Chứng chỉ</a></li>
-                    <li><a href="#pdf-cv" class="nav-link" id="link-pdf-cv">Xem File CV</a></li>
-                </ul>
-            </nav>
-
-            <div class="header-actions">
-                <button class="theme-btn" id="theme-btn" aria-label="Toggle dark/light theme">
-                    <i class='bx bx-moon'></i>
-                    <i class='bx bx-sun'></i>
-                </button>
-                <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu">
-                    <i class='bx bx-menu'></i>
-                </button>
-            </div>
-        </div>
-    </header>
+    <!-- Navigation Header Placeholder -->
+    <div id="header-placeholder"></div>
 
     <!-- Main Content Container -->
     <main>
@@ -66,20 +38,33 @@
             <div class="hero-grid">
                 <div class="hero-content">
                     <div class="hero-badge">
-                        <i class='bx bxs-circle'></i> Sẵn sàng làm việc
+                        <i class='bx bxs-circle'></i>
+                        <span class="lang-vi">Sẵn sàng làm việc</span>
+                        <span class="lang-en">Open for Work</span>
                     </div>
-                    <h1 class="hero-title">Xin chào, Tôi là<br><span>Bùi Dương Trí</span></h1>
+                    <h1 class="hero-title">
+                        <span class="lang-vi">Xin chào, Tôi là<br><span>Bùi Dương Trí</span></span>
+                        <span class="lang-en">Hi, I am<br><span>Bui Duong Tri</span></span>
+                    </h1>
+                    
                     <div class="hero-subtitle">
-                        Tôi là một <span id="typewriter" class="accent-color">Nhân viên hỗ trợ CNTT</span>
+                        <span class="lang-vi">Tôi là một </span>
+                        <span class="lang-en">I am an </span>
+                        <span id="typewriter" class="accent-color">Nhân viên hỗ trợ CNTT</span>
                     </div>
-                    <p class="hero-desc">
+                    
+                    <p class="hero-desc lang-vi">
                         Kỹ sư Hỗ trợ kỹ thuật IT và Phát triển phần mềm tốt nghiệp chuyên ngành Công nghệ Phần mềm tại Đại học HUTECH. Tôi sở hữu tư duy phân tích tốt, khả năng xử lý sự cố hệ thống nhanh chóng và nền tảng vững vàng về cả hệ thống, mạng lẫn lập trình web.
+                    </p>
+                    <p class="hero-desc lang-en">
+                        IT Support Engineer & Software Developer graduated in Software Engineering from HUTECH University. I possess analytical thinking, rapid system troubleshooting skills, and a solid foundation in systems, networks, and web development.
                     </p>
                     
                     <div class="hero-meta">
                         <div class="meta-item">
                             <i class='bx bx-map'></i>
-                            <span>TP. Hồ Chí Minh</span>
+                            <span class="lang-vi">TP. Hồ Chí Minh</span>
+                            <span class="lang-en">Ho Chi Minh City, VN</span>
                         </div>
                         <div class="meta-item">
                             <i class='bx bx-envelope'></i>
@@ -90,13 +75,17 @@
                             <span>0988 342 551</span>
                         </div>
                     </div>
-
+ 
                     <div class="hero-actions">
                         <a href="#pdf-cv" class="btn btn-primary" id="btn-hero-preview">
-                            <i class='bx bx-file-find'></i> Xem CV Bản Cứng
+                            <i class='bx bx-file-find'></i>
+                            <span class="lang-vi">Xem CV Bản Cứng</span>
+                            <span class="lang-en">View PDF Resume</span>
                         </a>
                         <a href="#contact" class="btn btn-secondary" id="btn-hero-contact">
-                            <i class='bx bx-paper-plane'></i> Liên hệ ngay
+                            <i class='bx bx-paper-plane'></i>
+                            <span class="lang-vi">Liên hệ ngay</span>
+                            <span class="lang-en">Contact Me</span>
                         </a>
                     </div>
                 </div>
@@ -118,25 +107,42 @@
                 </div>
             </div>
         </section>
-
+ 
         <!-- 2. ABOUT & OBJECTIVE SECTION -->
         <section id="about">
             <div class="section-header">
-                <span class="section-subtitle">Tóm tắt lý lịch</span>
-                <h2 class="section-title">Mục tiêu <span>Nghề nghiệp</span></h2>
+                <span class="section-subtitle">
+                    <span class="lang-vi">Tóm tắt lý lịch</span>
+                    <span class="lang-en">Profile Summary</span>
+                </span>
+                <h2 class="section-title">
+                    <span class="lang-vi">Mục tiêu <span>Nghề nghiệp</span></span>
+                    <span class="lang-en">Career <span>Objective</span></span>
+                </h2>
             </div>
             
             <div class="about-box glass-panel">
                 <div class="about-grid">
                     <div class="about-text">
-                        <p>
+                        <p class="lang-vi">
                             Là một nhân viên hỗ trợ kỹ thuật IT sở hữu khả năng phân tích nhạy bén và kỹ năng xử lý sự cố xuất sắc. Tôi tích lũy nền tảng kiến thức vững vàng về hệ thống máy chủ, ứng dụng phần mềm doanh nghiệp, cũng như thiết lập cấu hình mạng cơ bản.
                         </p>
-                        <p>
-                            Với kinh nghiệm làm việc thực tế tại VNPT hỗ trợ hệ thống Một cửa điện tử và Quản lý văn bản (QLVB) trong chính quyền số, tôi tự tin trong việc tiếp nhận thông tin, chuẩn hóa và xử lý ticket (L1) tối ưu theo đúng cam kết SLA, đem lại sự hài lòng cao nhất cho khách hàng.
+                        <p class="lang-en">
+                            An IT Support Specialist with strong analytical capabilities and excellent troubleshooting skills. I have accumulated a solid foundation in server systems, enterprise software applications, and basic network configurations.
                         </p>
-                        <p>
+                        
+                        <!-- <p class="lang-vi">
+                            Với kinh nghiệm làm việc thực tế tại VNPT hỗ trợ hệ thống Một cửa điện tử và Quản lý văn bản (QLVB) trong chính quyền số, tôi tự tin trong việc tiếp nhận thông tin, chuẩn hóa và xử lý ticket (L1) tối ưu theo đúng cam kết SLA, đem lại sự hài lòng cao nhất cho khách hàng.
+                        </p> -->
+                        <!-- <p class="lang-en">
+                            With practical experience at VNPT supporting digital government systems (One-stop system & Document Management), I am highly confident in receiving, standardizing, and resolving L1 tickets optimized in line with SLA commitments, ensuring top client satisfaction.
+                        </p> -->
+                        
+                        <p class="lang-vi">
                             Mong muốn đóng góp năng lực xử lý kỹ thuật linh hoạt, kỹ năng giao tiếp phối hợp hiệu quả và tư duy hướng tới trải nghiệm người dùng để cùng phát triển trong một môi trường IT chuyên nghiệp và hiện đại.
+                        </p>
+                        <p class="lang-en">
+                            Aiming to leverage flexible technical support capacity, effective communication, and user-centric thinking to grow within a professional and modern IT environment.
                         </p>
                         
                         <div class="about-highlights" style="margin-top: 15px;">
@@ -145,8 +151,14 @@
                                 <div class="highlight-lbl">2021 - 2025</div>
                             </div>
                             <div class="highlight-card">
-                                <div class="highlight-num">Khá</div>
-                                <div class="highlight-lbl">Học lực chuyên ngành</div>
+                                <div class="highlight-num">
+                                    <span class="lang-vi">Khá</span>
+                                    <span class="lang-en">Good</span>
+                                </div>
+                                <div class="highlight-lbl">
+                                    <span class="lang-vi">Học lực</span>
+                                    <span class="lang-en">GPA</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -155,49 +167,74 @@
                         <div class="info-row">
                             <div class="info-icon"><i class='bx bx-calendar'></i></div>
                             <div class="info-details">
-                                <label>Ngày sinh</label>
+                                <label class="lang-vi">Ngày sinh</label>
+                                <label class="lang-en">Date of Birth</label>
                                 <span>23/04/2003</span>
                             </div>
                         </div>
                         <div class="info-row">
                             <div class="info-icon"><i class='bx bx-map-pin'></i></div>
                             <div class="info-details">
-                                <label>Nơi sinh sống</label>
-                                <span>TP. Hồ Chí Minh</span>
+                                <label class="lang-vi">Nơi sinh sống</label>
+                                <label class="lang-en">Location</label>
+                                <span class="lang-vi">TP. Hồ Chí Minh</span>
+                                <span class="lang-en">Ho Chi Minh City, VN</span>
                             </div>
                         </div>
                         <div class="info-row">
                             <div class="info-icon"><i class='bx bx-graduation'></i></div>
                             <div class="info-details">
-                                <label>Trình độ học vấn</label>
-                                <span>Cử nhân CNTT (Kỹ sư Phần mềm)</span>
+                                <label class="lang-vi">Trình độ học vấn</label>
+                                <label class="lang-en">Education</label>
+                                <span class="lang-vi">Kỹ sư CNTT (Công nghệ Phần mềm)</span>
+                                <span class="lang-en">B.S. in IT (Software Eng.)</span>
                             </div>
                         </div>
                         <div class="info-row">
                             <div class="info-icon"><i class='bx bx-universal-access'></i></div>
                             <div class="info-details">
-                                <label>Ngoại ngữ</label>
-                                <span>Tiếng Anh (B1)</span>
+                                <label class="lang-vi">Ngoại ngữ</label>
+                                <label class="lang-en">Languages</label>
+                                <span class="lang-vi">Tiếng Anh (B1)</span>
+                                <span class="lang-en">English (B1 CEFR)</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
+ 
         <!-- 3. SKILLS SECTION -->
         <section id="skills">
             <div class="section-header">
-                <span class="section-subtitle">Chuyên môn kỹ thuật</span>
-                <h2 class="section-title">Hệ thống <span>Kỹ năng</span></h2>
+                <span class="section-subtitle">
+                    <span class="lang-vi">Chuyên môn kỹ thuật</span>
+                    <span class="lang-en">Technical Expertise</span>
+                </span>
+                <h2 class="section-title">
+                    <span class="lang-vi">Hệ thống <span>Kỹ năng</span></span>
+                    <span class="lang-en">Skills <span>Matrix</span></span>
+                </h2>
             </div>
             
             <div class="skills-container">
                 <div class="skills-tabs">
-                    <button class="tab-btn active" data-target="skills-backend" id="tab-backend">Backend & DB</button>
-                    <button class="tab-btn" data-target="skills-frontend" id="tab-frontend">Frontend & Mobile</button>
-                    <button class="tab-btn" data-target="skills-tools" id="tab-tools">Hệ thống & Công cụ</button>
-                    <button class="tab-btn" data-target="skills-soft" id="tab-soft">Kỹ năng mềm</button>
+                    <button class="tab-btn active" data-target="skills-backend" id="tab-backend">
+                        <span class="lang-vi">Backend & DB</span>
+                        <span class="lang-en">Backend & DB</span>
+                    </button>
+                    <button class="tab-btn" data-target="skills-frontend" id="tab-frontend">
+                        <span class="lang-vi">Frontend & Mobile</span>
+                        <span class="lang-en">Frontend & Mobile</span>
+                    </button>
+                    <button class="tab-btn" data-target="skills-tools" id="tab-tools">
+                        <span class="lang-vi">Hệ thống & Công cụ</span>
+                        <span class="lang-en">Systems & Tools</span>
+                    </button>
+                    <button class="tab-btn" data-target="skills-soft" id="tab-soft">
+                        <span class="lang-vi">Kỹ năng mềm</span>
+                        <span class="lang-en">Soft Skills</span>
+                    </button>
                 </div>
                 
                 <div class="skills-content">
@@ -212,7 +249,10 @@
                         <div class="skill-card">
                             <i class='bx bx-code-curly skill-icon' style="color: #a855f7;"></i>
                             <span class="skill-name">.NET / C#</span>
-                            <span class="skill-level">Cơ bản</span>
+                            <span class="skill-level">
+                                <span class="lang-vi">Cơ bản</span>
+                                <span class="lang-en">Basic / Core</span>
+                            </span>
                         </div>
                         <div class="skill-card">
                             <i class='bx bxl-nodejs skill-icon' style="color: #3f873f;"></i>
@@ -227,7 +267,10 @@
                         <div class="skill-card">
                             <i class='bx bxs-data skill-icon' style="color: #00758f;"></i>
                             <span class="skill-name">MySQL</span>
-                            <span class="skill-level">Thiết kế / Truy vấn</span>
+                            <span class="skill-level">
+                                <span class="lang-vi">Thiết kế / Truy vấn</span>
+                                <span class="lang-en">Design & Queries</span>
+                            </span>
                         </div>
                         <div class="skill-card">
                             <i class='bx bxl-mongodb skill-icon' style="color: #47a248;"></i>
@@ -246,7 +289,10 @@
                         <div class="skill-card">
                             <i class='bx bxl-css3 skill-icon' style="color: #1572b6;"></i>
                             <span class="skill-name">CSS3 / Flex / Grid</span>
-                            <span class="skill-level">Tối ưu Responsive</span>
+                            <span class="skill-level">
+                                <span class="lang-vi">Tối ưu Responsive</span>
+                                <span class="lang-en">Responsive Design</span>
+                            </span>
                         </div>
                         <div class="skill-card">
                             <i class='bx bxl-javascript skill-icon' style="color: #f7df1e;"></i>
@@ -256,12 +302,18 @@
                         <div class="skill-card">
                             <i class='bx bxs-mobile skill-icon' style="color: #02569b;"></i>
                             <span class="skill-name">Flutter</span>
-                            <span class="skill-level">Thiết kế Mobile App</span>
+                            <span class="skill-level">
+                                <span class="lang-vi">Thiết kế Mobile App</span>
+                                <span class="lang-en">Mobile App Design</span>
+                            </span>
                         </div>
                         <div class="skill-card">
                             <i class='bx bxl-jquery skill-icon' style="color: #0769ad;"></i>
                             <span class="skill-name">jQuery</span>
-                            <span class="skill-level">Tương tác động</span>
+                            <span class="skill-level">
+                                <span class="lang-vi">Tương tác động</span>
+                                <span class="lang-en">Dynamic UI</span>
+                            </span>
                         </div>
                     </div>
                     
@@ -275,22 +327,37 @@
                         <div class="skill-card">
                             <i class='bx bxl-docker skill-icon' style="color: #2496ed;"></i>
                             <span class="skill-name">Docker</span>
-                            <span class="skill-level">Đóng gói Container</span>
+                            <span class="skill-level">
+                                <span class="lang-vi">Đóng gói Container</span>
+                                <span class="lang-en">Containerization</span>
+                            </span>
                         </div>
                         <div class="skill-card">
                             <i class='bx bx-network-chart skill-icon' style="color: #6366f1;"></i>
                             <span class="skill-name">Jira / Postman</span>
-                            <span class="skill-level">Quản trị & Test API</span>
+                            <span class="skill-level">
+                                <span class="lang-vi">Quản trị & Test API</span>
+                                <span class="lang-en">API Management / Test</span>
+                            </span>
                         </div>
                         <div class="skill-card">
                             <i class='bx bx-support skill-icon' style="color: #10b981;"></i>
-                            <span class="skill-name">Hỗ trợ CNTT</span>
+                            <span class="skill-name">
+                                <span class="lang-vi">Hỗ trợ CNTT</span>
+                                <span class="lang-en">IT Support</span>
+                            </span>
                             <span class="skill-level">Xử lý sự cố IT / L1</span>
                         </div>
                         <div class="skill-card">
                             <i class='bx bx-server skill-icon' style="color: #8b5cf6;"></i>
-                            <span class="skill-name">Hệ thống Ticket</span>
-                            <span class="skill-level">Theo dõi & Xử lý lỗi</span>
+                            <span class="skill-name">
+                                <span class="lang-vi">Hệ thống Ticket</span>
+                                <span class="lang-en">Ticket Systems</span>
+                            </span>
+                            <span class="skill-level">
+                                <span class="lang-vi">Theo dõi & Xử lý lỗi</span>
+                                <span class="lang-en">Tracking & Debug</span>
+                            </span>
                         </div>
                     </div>
                     
@@ -298,35 +365,65 @@
                     <div class="skills-pane" id="skills-soft">
                         <div class="skill-card">
                             <i class='bx bx-group skill-icon' style="color: #3b82f6;"></i>
-                            <span class="skill-name">Làm việc nhóm</span>
-                            <span class="skill-level">Phối hợp đa chức năng</span>
+                            <span class="skill-name">
+                                <span class="lang-vi">Làm việc nhóm</span>
+                                <span class="lang-en">Teamwork</span>
+                            </span>
+                            <span class="skill-level">
+                                <span class="lang-vi">Phối hợp đa chức năng</span>
+                                <span class="lang-en">Cross-functional</span>
+                            </span>
                         </div>
                         <div class="skill-card">
                             <i class='bx bx-bulb skill-icon' style="color: #f59e0b;"></i>
-                            <span class="skill-name">Giải quyết vấn đề</span>
-                            <span class="skill-level">Tư duy phân tích lỗi</span>
+                            <span class="skill-name">
+                                <span class="lang-vi">Giải quyết vấn đề</span>
+                                <span class="lang-en">Problem Solving</span>
+                            </span>
+                            <span class="skill-level">
+                                <span class="lang-vi">Tư duy phân tích lỗi</span>
+                                <span class="lang-en">Troubleshooting</span>
+                            </span>
                         </div>
                         <div class="skill-card">
                             <i class='bx bx-happy-beaming skill-icon' style="color: #ec4899;"></i>
-                            <span class="skill-name">Tư duy UX</span>
-                            <span class="skill-level">Hướng tới người dùng</span>
+                            <span class="skill-name">
+                                <span class="lang-vi">Tư duy UX</span>
+                                <span class="lang-en">UX Thinking</span>
+                            </span>
+                            <span class="skill-level">
+                                <span class="lang-vi">Hướng tới người dùng</span>
+                                <span class="lang-en">User-Centric Design</span>
+                            </span>
                         </div>
                         <div class="skill-card">
                             <i class='bx bx-bar-chart-alt-2 skill-icon' style="color: #14b8a6;"></i>
-                            <span class="skill-name">Phân tích dữ liệu</span>
-                            <span class="skill-level">Tổng hợp & Lập báo cáo</span>
+                            <span class="skill-name">
+                                <span class="lang-vi">Phân tích dữ liệu</span>
+                                <span class="lang-en">Data Analysis</span>
+                            </span>
+                            <span class="skill-level">
+                                <span class="lang-vi">Tổng hợp & Lập báo cáo</span>
+                                <span class="lang-en">Reporting / Analytics</span>
+                            </span>
                         </div>
                     </div>
                     
                 </div>
             </div>
         </section>
-
+ 
         <!-- 4. EXPERIENCE TIMELINE SECTION -->
         <section id="experience">
             <div class="section-header">
-                <span class="section-subtitle">Chặng đường phát triển</span>
-                <h2 class="section-title">Kinh nghiệm <span>Làm việc</span></h2>
+                <span class="section-subtitle">
+                    <span class="lang-vi">Chặng đường phát triển</span>
+                    <span class="lang-en">Professional Journey</span>
+                </span>
+                <h2 class="section-title">
+                    <span class="lang-vi">Kinh nghiệm <span>Làm việc</span></span>
+                    <span class="lang-en">Work <span>Experience</span></span>
+                </h2>
             </div>
             
             <div class="timeline">
@@ -335,17 +432,14 @@
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-card glass-panel">
-                        <div class="timeline-date">8/2025 - 9/2025</div>
-                        <h3 class="timeline-role">KỸ SƯ HỖ TRỢ KỸ THUẬT</h3>
-                        <h4 class="timeline-company">VNPT TP. Hồ Chí Minh</h4>
-                        <ul class="timeline-desc">
-                            <li>Phân tích lỗi hệ thống, xác định nguyên nhân cốt lõi và lập báo cáo chi tiết cho đội ngũ kỹ thuật.</li>
-                            <li>Sử dụng hệ thống ticket nội bộ để tiếp nhận, phân loại và theo dõi các sự cố kỹ thuật của người dùng ở vai trò L1.</li>
-                            <li>Tạo ticket mô tả lỗi cực kỳ chi tiết bao gồm log hệ thống, các bước tái hiện lỗi để chuyển cấp (escalation) lên L2 xử lý khi cần.</li>
-                            <li>Phối hợp chặt chẽ với đội ngũ L2, theo dõi tiến độ xử lý và cập nhật liên tục trạng thái/phản hồi cho người dùng cuối.</li>
-                            <li>Nắm vững nghiệp vụ và trực tiếp hỗ trợ kỹ thuật về hệ thống Một cửa điện tử cùng Quản lý văn bản (QLVB) trong chính phủ số.</li>
-                            <li>Đào tạo, hướng dẫn khách hàng sử dụng hệ thống hiệu quả, thu thập đóng góp để cải tiến sản phẩm.</li>
-                        </ul>
+                        <div class="timeline-date lang-vi">Tháng 8/2025 - Tháng 9/2025</div>
+                        <div class="timeline-date lang-en">August 2025 - September 2025</div>
+                        
+                        <h3 class="timeline-role lang-vi">KỸ SƯ HỖ TRỢ KỸ THUẬT</h3>
+                        <h3 class="timeline-role lang-en">TECHNICAL SUPPORT ENGINEER</h3>
+                        
+                        <h4 class="timeline-company lang-vi" style="margin-bottom: 0;">VNPT TP. Hồ Chí Minh</h4>
+                        <h4 class="timeline-company lang-en" style="margin-bottom: 0;">VNPT Ho Chi Minh City</h4>
                     </div>
                 </div>
                 
@@ -353,26 +447,31 @@
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-card glass-panel">
-                        <div class="timeline-date">4/2025 - 7/2025</div>
-                        <h3 class="timeline-role">THỰC TẬP SINH LẬP TRÌNH</h3>
-                        <h4 class="timeline-company">Delphinus Consulting</h4>
-                        <ul class="timeline-desc">
-                            <li>Được đào tạo bài bản và tham gia quy trình phát triển phần mềm Agile/Scrum thực tế, áp dụng Git workflow chuyên nghiệp.</li>
-                            <li>Nghiên cứu sâu và thực hành thiết kế, xây dựng các dịch vụ RESTful API bảo mật và chuẩn hóa bằng Java Spring Boot.</li>
-                            <li>Làm việc trực tiếp và tích hợp cơ sở dữ liệu MySQL, quản lý dependencies với Maven và triển khai ứng dụng bằng Docker container.</li>
-                            <li>Tham gia hỗ trợ lập trình các tính năng cơ bản, gỡ lỗi (debug) và cải thiện hiệu năng code dưới sự dẫn dắt của các senior mentor.</li>
-                        </ul>
+                        <div class="timeline-date lang-vi">4/2025 - 7/2025</div>
+                        <div class="timeline-date lang-en">4/2025 - 7/2025</div>
+                        
+                        <h3 class="timeline-role lang-vi">THỰC TẬP SINH LẬP TRÌNH</h3>
+                        <h3 class="timeline-role lang-en">SOFTWARE ENGINEERING INTERN</h3>
+                        
+                        <h4 class="timeline-company lang-vi" style="margin-bottom: 0;">Delphinus Consulting</h4>
+                        <h4 class="timeline-company lang-en" style="margin-bottom: 0;">Delphinus Consulting</h4>
                     </div>
                 </div>
                 
             </div>
         </section>
-
+ 
         <!-- 5. FEATURED PROJECTS SECTION -->
         <section id="projects">
             <div class="section-header">
-                <span class="section-subtitle">Sản phẩm tiêu biểu</span>
-                <h2 class="section-title">Dự án <span>Cá nhân & Nhóm</span></h2>
+                <span class="section-subtitle">
+                    <span class="lang-vi">Sản phẩm tiêu biểu</span>
+                    <span class="lang-en">Featured Projects</span>
+                </span>
+                <h2 class="section-title">
+                    <span class="lang-vi">Dự án <span>Cá nhân & Nhóm</span></span>
+                    <span class="lang-en">Personal & <span>Group Projects</span></span>
+                </h2>
             </div>
             
             <div class="projects-grid">
@@ -380,11 +479,19 @@
                 <!-- Project 1: Webshop -->
                 <div class="project-card glass-panel">
                     <div class="project-body">
-                        <div class="project-badge">Dự án chính thức</div>
-                        <h3 class="project-title">Hệ thống Webshop E-Commerce</h3>
-                        <p class="project-desc">
+                        <div class="project-badge lang-vi">Dự án Website</div>
+                        <div class="project-badge lang-en">Web Project</div>
+                        
+                        <h3 class="project-title lang-vi">Hệ thống Webshop E-Commerce</h3>
+                        <h3 class="project-title lang-en">E-Commerce Webshop System</h3>
+                        
+                        <p class="project-desc lang-vi">
                             Thiết kế & phát triển nền tảng thương mại điện tử fullstack tích hợp các tính năng tự động nâng cao. Hệ thống được tích hợp cổng thanh toán tự động VietQR thông qua PayOS/Casso API, chatbot thông minh hỗ trợ khách hàng theo thời gian thực (rule-based parsing) và tối ưu hóa hệ thống địa giới hành chính local giúp cải thiện tải và tốc độ tối đa cho người dùng.
                         </p>
+                        <p class="project-desc lang-en">
+                            Designed and developed a full-stack e-commerce platform integrated with advanced automated features. The system features automated VietQR payments via PayOS/Casso API, a real-time rule-based chatbot, and local administrative boundary caching to optimize loading performance and user speed.
+                        </p>
+                        
                         <div class="project-tech">
                             <span class="tech-tag">CodeIgniter 3 (PHP)</span>
                             <span class="tech-tag">jQuery (JS)</span>
@@ -394,7 +501,8 @@
                         </div>
                     </div>
                     <div class="project-footer">
-                        <span style="font-size: 13px; font-weight:600; color: var(--text-muted);">Vai trò: Trưởng nhóm (4 người)</span>
+                        <span class="lang-vi" style="font-size: 13px; font-weight:600; color: var(--text-muted);">Vai trò: Trưởng nhóm (4 người)</span>
+                        <span class="lang-en" style="font-size: 13px; font-weight:600; color: var(--text-muted);">Role: Team Leader (4 members)</span>
                         <a href="https://github.com/tritin5987/webshop" target="_blank" class="project-link" id="link-project-webshop">
                             Source <i class='bx bxl-github'></i>
                         </a>
@@ -404,11 +512,19 @@
                 <!-- Project 2: App Music -->
                 <div class="project-card glass-panel">
                     <div class="project-body">
-                        <div class="project-badge">Dự án Mobile & Web</div>
-                        <h3 class="project-title">Ứng dụng Music & Identity</h3>
-                        <p class="project-desc">
+                        <div class="project-badge lang-vi">Dự án Mobile</div>
+                        <div class="project-badge lang-en">Mobile Project</div>
+                        
+                        <h3 class="project-title lang-vi">Ứng dụng Music</h3>
+                        <h3 class="project-title lang-en">Music Streaming Application</h3>
+                        
+                        <p class="project-desc lang-vi">
                             Xây dựng hệ thống ứng dụng nghe nhạc trực tuyến đa nền tảng tập trung vào thiết kế Clean Architecture phân tách rõ ràng. Hệ thống bao gồm 2 dịch vụ Backend riêng biệt (Java Spring Boot & NodeJS) phục vụ xử lý logic và danh tính (JWT), kết nối mượt mà tới ứng dụng di động Flutter. Tích hợp tính năng tự động cập nhật bài hát mới từ các nguồn nhạc lớn và tìm kiếm nâng cao theo lời bài hát bằng Apache Lucene.
                         </p>
+                        <p class="project-desc lang-en">
+                            Built a cross-platform online music streaming system focusing on clear Clean Architecture separation. The system comprises 2 independent backend services (Java Spring Boot & Node.js) for handling logic and identity (JWT), connecting seamlessly to a Flutter mobile app. Features automatic music crawling from major platforms and advanced lyric search utilizing Apache Lucene.
+                        </p>
+                        
                         <div class="project-tech">
                             <span class="tech-tag">Spring Boot</span>
                             <span class="tech-tag">Flutter</span>
@@ -418,7 +534,8 @@
                         </div>
                     </div>
                     <div class="project-footer">
-                        <span style="font-size: 13px; font-weight:600; color: var(--text-muted);">Vai trò: Trưởng nhóm (4 người)</span>
+                        <span class="lang-vi" style="font-size: 13px; font-weight:600; color: var(--text-muted);">Vai trò: Trưởng nhóm (4 người)</span>
+                        <span class="lang-en" style="font-size: 13px; font-weight:600; color: var(--text-muted);">Role: Team Leader (4 members)</span>
                         <a href="https://github.com/tritin5987/Music_BackEnd" target="_blank" class="project-link" id="link-project-music">
                             Source <i class='bx bxl-github'></i>
                         </a>
@@ -427,12 +544,18 @@
                 
             </div>
         </section>
-
+ 
         <!-- 6. CERTIFICATIONS SECTION -->
         <section id="certs">
             <div class="section-header">
-                <span class="section-subtitle">Chỉ số năng lực</span>
-                <h2 class="section-title">Chứng chỉ <span>Đạt được</span></h2>
+                <span class="section-subtitle">
+                    <span class="lang-vi">Chỉ số năng lực</span>
+                    <span class="lang-en">Certifications & Badges</span>
+                </span>
+                <h2 class="section-title">
+                    <span class="lang-vi">Chứng chỉ <span>Đạt được</span></span>
+                    <span class="lang-en">Earned <span>Credentials</span></span>
+                </h2>
             </div>
             
             <div class="cert-grid">
@@ -443,7 +566,8 @@
                     <div class="cert-details">
                         <span class="cert-title">JavaScript Essentials 1</span>
                         <span class="cert-issuer">Cisco Networking Academy</span>
-                        <span class="cert-date">Tháng 12 / 2024</span>
+                        <span class="cert-date lang-vi">Tháng 12 / 2024</span>
+                        <span class="cert-date lang-en">December 2024</span>
                     </div>
                 </div>
                 
@@ -453,7 +577,8 @@
                     <div class="cert-details">
                         <span class="cert-title">JavaScript Essentials 2</span>
                         <span class="cert-issuer">Cisco Networking Academy</span>
-                        <span class="cert-date">Tháng 12 / 2024</span>
+                        <span class="cert-date lang-vi">Tháng 12 / 2024</span>
+                        <span class="cert-date lang-en">December 2024</span>
                     </div>
                 </div>
                 
@@ -463,7 +588,8 @@
                     <div class="cert-details">
                         <span class="cert-title">Networking Basics</span>
                         <span class="cert-issuer">Cisco Networking Academy</span>
-                        <span class="cert-date">Tháng 12 / 2024</span>
+                        <span class="cert-date lang-vi">Tháng 12 / 2024</span>
+                        <span class="cert-date lang-en">December 2024</span>
                     </div>
                 </div>
                 
@@ -471,65 +597,87 @@
                 <div class="cert-card glass-panel">
                     <div class="cert-icon"><i class='bx bx-globe'></i></div>
                     <div class="cert-details">
-                        <span class="cert-title">Ngoại ngữ B1</span>
-                        <span class="cert-issuer">Chứng chỉ Tiếng Anh</span>
-                        <span class="cert-date">Bậc 3 / Khung tham chiếu châu Âu</span>
+                        <span class="cert-title lang-vi">Ngoại ngữ B1</span>
+                        <span class="cert-title lang-en">English B1 Level</span>
+                        <span class="cert-issuer lang-vi">Chứng chỉ Tiếng Anh</span>
+                        <span class="cert-issuer lang-en">English Proficiency Cert</span>
                     </div>
                 </div>
                 
             </div>
         </section>
-
+ 
         <!-- 7. PDF CV PREVIEWER SECTION -->
         <section id="pdf-cv" class="pdf-section">
             <div class="section-header">
-                <span class="section-subtitle">Tải tài liệu</span>
-                <h2 class="section-title">Xem trực tiếp <span>Hồ sơ PDF</span></h2>
+                <span class="section-subtitle">
+                    <span class="lang-vi">Tải tài liệu</span>
+                    <span class="lang-en">Document Download</span>
+                </span>
+                <h2 class="section-title">
+                    <span class="lang-vi">Xem trực tiếp <span>Hồ sơ PDF</span></span>
+                    <span class="lang-en">Live <span>PDF Resume Preview</span></span>
+                </h2>
             </div>
             
             <div class="pdf-wrapper">
                 <div class="pdf-info">
-                    <h3>Bạn muốn lưu giữ bản in?</h3>
-                    <p>
+                    <h3 class="lang-vi">Bạn muốn lưu giữ bản in?</h3>
+                    <h3 class="lang-en">Want a hard copy?</h3>
+                    
+                    <p class="lang-vi">
                         Bên cạnh phiên bản danh thiếp web trực quan, bạn có thể xem bản xem trước trực tiếp của CV bản in định dạng A4 bên phải. Trang đầu tiên được vẽ trực tiếp bằng công nghệ PDF.js.
                     </p>
-                    <p>
+                    <p class="lang-en">
+                        In addition to the interactive web resume, you can view a live preview of the A4-formatted printed CV on the right. The first page is rendered dynamically using PDF.js.
+                    </p>
+                    
+                    <p class="lang-vi">
                         Hãy nhấn vào nút "Tải PDF đầy đủ" hoặc "Xem trong tab mới" để nhận tệp CV chính thức có đầy đủ chữ ký, định dạng gốc sắc nét để lưu trữ hoặc gửi tới nhà tuyển dụng.
                     </p>
-                    <ul class="pdf-features">
-                        <li><i class='bx bx-check-circle'></i> Tự động tương thích với các ứng dụng tuyển dụng tự động (ATS Friendly).</li>
-                        <li><i class='bx bx-check-circle'></i> Sắp xếp 2 trang hoàn chỉnh, chuẩn cấu trúc công nghệ.</li>
-                        <li><i class='bx bx-check-circle'></i> Đường link và định dạng được tối ưu hóa tối đa.</li>
-                    </ul>
+                    <p class="lang-en">
+                        Click 'View Fullscreen' or 'Download PDF' to obtain the official CV file in its original crisp layout, perfect for emailing or printing for recruiters.
+                    </p>
                 </div>
                 
                 <div class="pdf-card-preview glass-panel">
                     <div class="pdf-canvas-container" id="pdf-preview-container">
                         <div class="pdf-loader" id="pdf-loader">
                             <i class='bx bx-loader-alt'></i>
-                            <span>Đang kết xuất PDF...</span>
+                            <span class="lang-vi">Đang kết xuất PDF...</span>
+                            <span class="lang-en">Rendering PDF...</span>
                         </div>
                         <canvas id="pdf-preview" style="opacity: 0;"></canvas>
                     </div>
                     
                     <div class="pdf-actions">
                         <button onclick="openPDF()" class="btn btn-primary" id="btn-pdf-open">
-                            <i class='bx bx-window-open'></i> Xem toàn màn hình
+                            <i class='bx bx-window-open'></i>
+                            <span class="lang-vi">Xem toàn màn hình</span>
+                            <span class="lang-en">View Fullscreen</span>
                         </button>
                         <a href="assets/docs/Bùi Dương Trí.pdf" download="Bui_Duong_Tri_CV.pdf" class="btn btn-secondary" id="btn-pdf-download">
-                            <i class='bx bx-download'></i> Tải tệp PDF
+                            <i class='bx bx-download'></i>
+                            <span class="lang-vi">Tải tệp PDF</span>
+                            <span class="lang-en">Download PDF</span>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
-
+ 
         <!-- 8. CONTACT & FOOTER CALL TO ACTION -->
         <section id="contact" class="contact-section">
             <div class="contact-box glass-panel" style="background: linear-gradient(135deg, var(--bg-glass), rgba(99,102,241,0.05)); border: 1px solid rgba(99, 102, 241, 0.2);">
-                <h2>Bắt đầu một <span>Hợp tác mới</span></h2>
-                <p>
+                <h2>
+                    <span class="lang-vi">Bắt đầu một <span>Hợp tác mới</span></span>
+                    <span class="lang-en">Let's Connect & <span>Collaborate</span></span>
+                </h2>
+                <p class="lang-vi">
                     Bạn đang tìm kiếm một Nhân viên hỗ trợ IT nhạy bén, hoặc một Lập trình viên Web tận tâm? Tôi luôn sẵn sàng thảo luận về các cơ hội nghề nghiệp. Hãy kết nối ngay!
+                </p>
+                <p class="lang-en">
+                    Looking for an analytical IT Support Specialist or a dedicated Web Developer? I am always open to discussing career opportunities. Let's connect!
                 </p>
                 <div class="contact-channels">
                     <a href="tel:0988342551" class="channel-btn" id="btn-call">
@@ -544,14 +692,12 @@
                 </div>
             </div>
         </section>
-
+ 
     </main>
-
-    <!-- Global Footer -->
-    <footer>
-        <p>&copy; 2026 Bùi Dương Trí. Thiết kế và tối ưu hoàn chỉnh trên Web, Mobile và Tablet (Pad).</p>
-    </footer>
-
+ 
+    <!-- Global Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+ 
     <!-- App Logic Script -->
     <script src="assets/js/script.js"></script>
 </body>

@@ -1415,3 +1415,43 @@ footer {
         justify-content: center;
     }
 }
+
+/* Language Switcher Styling */
+.lang-btn {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-glass);
+    color: var(--text-primary);
+    padding: 0 14px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    transition: var(--hover-transition);
+    box-shadow: var(--card-shadow);
+    letter-spacing: 0.5px;
+    gap: 6px;
+}
+
+.lang-btn:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    transform: scale(1.03);
+}
+
+.lang-btn i {
+    font-size: 16px;
+}
+
+/* Native Language Visibility Rules */
+body.vi-mode .lang-en {
+    display: none !important;
+}
+
+body.en-mode .lang-vi {
+    display: none !important;
+}
+
