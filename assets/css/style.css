@@ -436,6 +436,23 @@ header.scrolled {
     animation: morph 8s ease-in-out infinite alternate;
 }
 
+.avatar-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+    margin-bottom: 12px;
+    box-shadow: 0 4px 15px var(--accent-glow);
+    transition: var(--hover-transition);
+}
+
+.avatar-img:hover {
+    transform: scale(1.05) rotate(3deg);
+    border-color: var(--accent-secondary);
+}
+
+
 .avatar-card i {
     font-size: 80px;
     color: var(--accent-color);
