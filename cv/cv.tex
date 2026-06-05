@@ -1,0 +1,96 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{marvosym}
+
+% Section title formatting
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+
+% Custom commands for CV
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeSubheading}[4]{
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\begin{document}
+
+% HEADER
+\begin{center}
+    {\Huge \scshape BUI DUONG TRI} \\ \vspace{5pt}
+    {\large SOFTWARE DEPLOYMENT ENGINEER} \\ \vspace{5pt}
+    \small \Mobilefone\ 0988 342 551 $|$ \Letter\ \href{mailto:bdtcloner1@gmail.com}{bdtcloner1@gmail.com} $|$ Website: \href{https://tridev.id.vn}{tridev.id.vn} $|$ Ho Chi Minh City, Vietnam
+\end{center}
+
+% SUMMARY
+\section{Summary}
+\small
+Results-oriented Software Deployment Engineer with solid expertise in application deployment, troubleshooting, and technical support. Possesses a strong foundation in software engineering, database management, and networking. Highly adaptable, quick to learn, and passionate about optimizing deployment workflows and ensuring system reliability.
+
+% SKILLS
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Backend}{: Java (Spring Boot), .NET/C\#, Node.js (Express, NestJS), TypeScript} \\
+     \textbf{Frontend}{: HTML5, CSS3, JavaScript} \\
+     \textbf{Databases}{: MySQL, MongoDB, SQLite} \\
+     \textbf{Tools \& Technologies}{: Git, Docker, Bun, PM2, Postman, Jira}
+    }}
+\end{itemize}
+
+% WORK EXPERIENCE
+\section{Work Experience}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeSubheading{VNPT Ho Chi Minh City}{Aug 2021 -- Aug 2025}{Technical Support Engineer}{}
+    \resumeItem{Analyzed system logs and diagnosed technical issues to prepare detailed root-cause reports.}
+    \resumeItem{Managed and resolved L1 support tickets while escalating complex technical issues to L2 engineers.}
+    \resumeItem{Provided comprehensive technical support and user training for large-scale government software (One-Stop Shop and Document Management Systems).}
+
+    \resumeSubheading{Delphinus Consulting}{Aug 2025 -- Sept 2025}{Software Engineering Intern}{}
+    \resumeItem{Developed robust RESTful APIs using Java Spring Boot in an Agile development environment.}
+    \resumeItem{Collaborated with version control using Git workflow, containerized services with Docker, and managed MySQL databases.}
+\end{itemize}
+
+% PROJECTS
+\section{Projects}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeSubheading{Zalo Bot Ecosystem (Personal Project)}{June 2025 -- Present}{Tech stack: Bun, TypeScript, SQLite, PayOS API, Gemini AI}{}
+    \resumeItem{Engineered a 3-tier Zalo automation ecosystem: Admin Bot (automatic key distribution), Client Bot (client application), and Server Key (central licensing server).}
+    \resumeItem{Integrated PayOS API (VietQR payment gateway) to automate license activation and renewal via real-time transaction webhooks.}
+    \resumeItem{Implemented Hardware ID (HWID) authentication to secure license management and restrict software usage to authorized devices.}
+    \resumeItem{Utilized browser simulation libraries for Zalo Web API communications, handling WebSocket connections and AES-GCM/AES-CBC/Pako decryption; integrated Gemini AI for smart chat capabilities.}
+
+    \resumeSubheading{App Music (Team Lead)}{Sept 2024 -- Apr 2025}{Tech stack: Java (Spring Boot), Node.js, Flutter, MySQL, MongoDB}{}
+    \resumeItem{Implemented JWT Authentication, Lucene-based lyrics search engine, and automated web crawlers for music data scraping.}
+    \resumeItem{GitHub repository: \href{https://github.com/tritin5987/Music_BackEnd}{github.com/tritin5987/Music\_BackEnd}}
+
+    \resumeSubheading{Webshop (Team Lead)}{Apr 2025 -- Present}{Tech stack: PHP (CodeIgniter 3), JS (jQuery), MySQL}{}
+    \resumeItem{Integrated PayOS (VietQR) payment system, developed a rule-based customer support chatbot, and optimized SEO structure.}
+    \resumeItem{GitHub repository: \href{https://github.com/tritin5987/webshop}{github.com/tritin5987/webshop}}
+\end{itemize}
+
+% EDUCATION
+\section{Education}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeSubheading{HCMC University of Technology (HUTECH)}{Aug 2021 -- Aug 2025}{Bachelor of Information Technology (Major: Software Engineering)}{Classification: Good}
+\end{itemize}
+
+% CERTIFICATIONS
+\section{Certifications}
+\begin{itemize}[leftmargin=0.15in]
+    \small{
+      \item Cisco: JavaScript Essentials 1 \& 2, Networking Basics (12/2024)
+      \item Languages: English (B1 Level)
+    }
+\end{itemize}
+
+\end{document}

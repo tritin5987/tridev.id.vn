@@ -1,0 +1,26 @@
+{
+  "latex-workshop.latex.outDir": "%DIR%/../assets/docs",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "pdflatex ➞ assets/docs/Bùi Dương Trí.pdf",
+      "tools": [
+        "pdflatex"
+      ]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-jobname=Bùi Dương Trí",
+        "%DOC%"
+      ],
+      "env": {}
+    }
+  ],
+  "latex-workshop.latex.clean.subFolder.enabled": true
+}
