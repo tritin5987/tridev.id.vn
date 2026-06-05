@@ -2,7 +2,7 @@
   "latex-workshop.latex.outDir": "%DIR%/../assets/docs",
   "latex-workshop.latex.recipes": [
     {
-      "name": "pdflatex ➞ assets/docs/Bùi Dương Trí.pdf",
+      "name": "pdflatex ➞ assets/docs/Bui_Duong_Tri.pdf",
       "tools": [
         "pdflatex"
       ]
@@ -16,7 +16,7 @@
         "-synctex=1",
         "-interaction=nonstopmode",
         "-file-line-error",
-        "-jobname=Bùi Dương Trí",
+        "-jobname=Bui_Duong_Tri",
         "%DOC%"
       ],
       "env": {}

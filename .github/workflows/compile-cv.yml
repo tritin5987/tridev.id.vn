@@ -24,9 +24,9 @@ jobs:
         run: |
           mkdir -p assets/docs
           if [ -f cv/cv.pdf ]; then
-            cp cv/cv.pdf "assets/docs/Bùi Dương Trí.pdf"
+            cp cv/cv.pdf "assets/docs/Bui_Duong_Tri.pdf"
           elif [ -f cv.pdf ]; then
-            cp cv.pdf "assets/docs/Bùi Dương Trí.pdf"
+            cp cv.pdf "assets/docs/Bui_Duong_Tri.pdf"
           else
             echo "Error: cv.pdf not found."
             exit 1
@@ -36,4 +36,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Auto-compile LaTeX CV to PDF [skip ci]"
-          file_pattern: "assets/docs/Bùi Dương Trí.pdf"
+          file_pattern: "assets/docs/Bui_Duong_Tri.pdf"

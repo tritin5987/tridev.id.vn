@@ -14,7 +14,13 @@ if ($LASTEXITCODE -eq 0) {
     Write-Host "Compilation succeeded!" -ForegroundColor Green
     
     $SourcePdf = Join-Path $ScriptDir "cv.pdf"
-    $DestPdf = Join-Path $ProjectRoot "assets\docs\Bùi Dương Trí.pdf"
+    $DestFolder = Join-Path $ProjectRoot "assets\docs"
+    $DestPdf = Join-Path $DestFolder "Bui_Duong_Tri.pdf"
+    
+    # Ensure destination directory exists
+    if (-not (Test-Path $DestFolder)) {
+        New-Item -ItemType Directory -Path $DestFolder -Force | Out-Null
+    }
     
     # Copy PDF to the website's assets directory
     Copy-Item -Force -Path $SourcePdf -Destination $DestPdf

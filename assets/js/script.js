@@ -266,7 +266,7 @@ function initSkillsTabs() {
 
 // In-page feature: PDF preview rendering via PDF.js
 function initPDFRenderer() {
-    const pdfUrl = "assets/docs/Bùi Dương Trí.pdf";
+    const pdfUrl = "assets/docs/Bui_Duong_Tri.pdf";
     const canvas = document.getElementById("pdf-preview");
     const loader = document.getElementById("pdf-loader");
 
@@ -323,6 +323,6 @@ function initPDFRenderer() {
 
 // PDF Open action (global access)
 function openPDF() {
-    const pdfUrl = "assets/docs/Bùi Dương Trí.pdf";
+    const pdfUrl = "assets/docs/Bui_Duong_Tri.pdf";
     window.open(pdfUrl, "_blank");
 }

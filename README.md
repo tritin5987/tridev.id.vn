@@ -1,6 +1,6 @@
 # Hướng dẫn Cập nhật & Biên dịch LaTeX CV (tridev.id.vn)
 
-Dự án này đã được cấu hình tích hợp sẵn mã nguồn LaTeX cho CV của bạn (`cv/cv.tex`) và các công cụ giúp tự động cập nhật và biên dịch thành tệp PDF (`assets/docs/Bùi Dương Trí.pdf`) hiển thị trên website.
+Dự án này đã được cấu hình tích hợp sẵn mã nguồn LaTeX cho CV của bạn (`cv/cv.tex`) và các công cụ giúp tự động cập nhật và biên dịch thành tệp PDF (`assets/docs/Bui_Duong_Tri.pdf`) hiển thị trên website.
 
 ---
 
@@ -26,7 +26,7 @@ Mỗi khi bạn muốn cập nhật thông tin trong CV:
    ```
 3. **GitHub Actions** sẽ tự động chạy:
    * Biên dịch `cv/cv.tex` sang tệp PDF.
-   * Sao chép tệp PDF mới vào `assets/docs/Bùi Dương Trí.pdf`.
+   * Sao chép tệp PDF mới vào `assets/docs/Bui_Duong_Tri.pdf`.
    * Tự động commit tệp PDF mới này ngược lại vào repository của bạn.
    * Website của bạn sẽ hiển thị bản CV mới nhất ngay lập tức!
 
@@ -36,7 +36,7 @@ Mỗi khi bạn muốn cập nhật thông tin trong CV:
 Nếu bạn thích biên dịch ngay khi đang code trong VS Code:
 1. Cài đặt extension **LaTeX Workshop** trên VS Code.
 2. Mở dự án `tridev.id.vn` bằng VS Code.
-3. Khi bạn chỉnh sửa và nhấn **Save** (`Ctrl + S`) tệp `cv/cv.tex`, extension sẽ tự động biên dịch và lưu đè trực tiếp vào thư mục `assets/docs/Bùi Dương Trí.pdf` nhờ cấu hình sẵn trong `.vscode/settings.json`.
+3. Khi bạn chỉnh sửa và nhấn **Save** (`Ctrl + S`) tệp `cv/cv.tex`, extension sẽ tự động biên dịch và lưu đè trực tiếp vào thư mục `assets/docs/Bui_Duong_Tri.pdf` nhờ cấu hình sẵn trong `.vscode/settings.json`.
 
 ---
 
