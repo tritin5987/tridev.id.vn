@@ -413,6 +413,15 @@ section {
     font-weight: 500;
 }
 
+.meta-entry.clickable {
+    cursor: pointer;
+    transition: var(--hover-transition);
+}
+
+.meta-entry.clickable:hover span {
+    color: var(--accent-color);
+}
+
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
@@ -1100,6 +1109,7 @@ section {
     font-family: var(--font-mono);
     font-size: 13px;
     color: var(--text-primary);
+    cursor: pointer;
     transition: var(--hover-transition);
 }
 
@@ -1172,4 +1182,40 @@ body.en-mode .lang-vi {
     .menu-toggle {
         display: block;
     }
+}
+
+/* ==========================================================================
+   TOAST NOTIFICATION (COPY FEEDBACK)
+   ========================================================================== */
+.toast-notice {
+    position: fixed;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--bg-elevated);
+    color: var(--text-primary);
+    border: 1px solid var(--accent-color);
+    padding: 10px 20px;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 9999;
+}
+
+.toast-notice.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.toast-notice i {
+    color: var(--accent-color);
+    font-size: 18px;
 }

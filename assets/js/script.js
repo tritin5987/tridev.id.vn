@@ -54,12 +54,13 @@ document.addEventListener("DOMContentLoaded", () => {
     initTypewriter();
     initSkillsTabs();
     initPDFRenderer();
+    initCopyContact();
 });
 
 // Dynamic Loader for modular HTML components with fallback handling
 function loadHeaderAndFooter() {
     // Header Loader
-    fetch("header.html")
+    fetch("header.html?v=2.1")
         .then(response => {
             if (!response.ok) throw new Error("Could not load header.html");
             return response.text();
@@ -75,7 +76,7 @@ function loadHeaderAndFooter() {
         });
 
     // Footer Loader
-    fetch("footer.html")
+    fetch("footer.html?v=2.1")
         .then(response => {
             if (!response.ok) throw new Error("Could not load footer.html");
             return response.text();
@@ -332,4 +333,110 @@ function initPDFRenderer() {
 function openPDF() {
     const pdfUrl = "assets/docs/Bui_Duong_Tri.pdf";
     window.open(pdfUrl, "_blank");
+}
+
+// Contact Info One-Click Copy Features (Phone & Email)
+function initCopyContact() {
+    const rawPhone = "0988342551";
+    const formattedPhone = "0988 342 551";
+    const emailAddress = "bdtcloner1@gmail.com";
+
+    const phoneButtons = document.querySelectorAll(".copy-phone-btn");
+    const emailButtons = document.querySelectorAll(".copy-email-btn");
+
+    function copyToClipboard(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+            return navigator.clipboard.writeText(text);
+        } else {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            textArea.style.left = "-999999px";
+            textArea.style.top = "-999999px";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            return new Promise((resolve, reject) => {
+                const ok = document.execCommand("copy");
+                textArea.remove();
+                ok ? resolve() : reject(new Error("execCommand copy failed"));
+            });
+        }
+    }
+
+    function showToast(message) {
+        let toast = document.getElementById("toast-notice");
+        if (!toast) {
+            toast = document.createElement("div");
+            toast.id = "toast-notice";
+            toast.className = "toast-notice";
+            document.body.appendChild(toast);
+        }
+        toast.innerHTML = `<i class='bx bx-check-circle'></i> <span>${message}</span>`;
+        toast.classList.add("show");
+        clearTimeout(toast._timeout);
+        toast._timeout = setTimeout(() => {
+            toast.classList.remove("show");
+        }, 2200);
+    }
+
+    // Phone Copy Handlers
+    phoneButtons.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            copyToClipboard(rawPhone).then(() => {
+                const isVi = document.body.classList.contains("vi-mode");
+                const toastMsg = isVi 
+                    ? `Đã sao chép số điện thoại: ${formattedPhone}` 
+                    : `Phone number copied: ${formattedPhone}`;
+                showToast(toastMsg);
+
+                // Inline visual feedback for contact channel button
+                const btnCall = document.getElementById("btn-call");
+                if (btn === btnCall) {
+                    const originalHTML = btnCall.innerHTML;
+                    btnCall.innerHTML = `<i class='bx bx-check'></i> <span>${isVi ? "Đã sao chép!" : "Copied!"}</span>`;
+                    btnCall.style.borderColor = "var(--accent-color)";
+                    btnCall.style.color = "var(--accent-color)";
+                    setTimeout(() => {
+                        btnCall.innerHTML = originalHTML;
+                        btnCall.style.borderColor = "";
+                        btnCall.style.color = "";
+                    }, 2000);
+                }
+            }).catch(err => {
+                console.error("Copy phone failed:", err);
+            });
+        });
+    });
+
+    // Email Copy Handlers
+    emailButtons.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            copyToClipboard(emailAddress).then(() => {
+                const isVi = document.body.classList.contains("vi-mode");
+                const toastMsg = isVi 
+                    ? `Đã sao chép email: ${emailAddress}` 
+                    : `Email copied: ${emailAddress}`;
+                showToast(toastMsg);
+
+                // Inline visual feedback for contact channel button
+                const btnMail = document.getElementById("btn-mail");
+                if (btn === btnMail) {
+                    const originalHTML = btnMail.innerHTML;
+                    btnMail.innerHTML = `<i class='bx bx-check'></i> <span>${isVi ? "Đã sao chép!" : "Copied!"}</span>`;
+                    btnMail.style.borderColor = "var(--accent-color)";
+                    btnMail.style.color = "var(--accent-color)";
+                    setTimeout(() => {
+                        btnMail.innerHTML = originalHTML;
+                        btnMail.style.borderColor = "";
+                        btnMail.style.color = "";
+                    }, 2000);
+                }
+            }).catch(err => {
+                console.error("Copy email failed:", err);
+            });
+        });
+    });
 }
