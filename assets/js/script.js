@@ -13,8 +13,8 @@ const fallbackHeader = `
                 <li><a href="#skills" class="nav-link" id="link-skills"><span class="lang-vi">Kỹ năng</span><span class="lang-en">Skills</span></a></li>
                 <li><a href="#experience" class="nav-link" id="link-experience"><span class="lang-vi">Kinh nghiệm</span><span class="lang-en">Experience</span></a></li>
                 <li><a href="#projects" class="nav-link" id="link-projects"><span class="lang-vi">Dự án</span><span class="lang-en">Projects</span></a></li>
-                <li><a href="#certs" class="nav-link" id="link-certs"><span class="lang-vi">Chứng chỉ</span><span class="lang-en">Certificates</span></a></li>
-                <li><a href="#pdf-cv" class="nav-link" id="link-pdf-cv"><span class="lang-vi">Xem File CV</span><span class="lang-en">View PDF CV</span></a></li>
+                <li><a href="#certs" class="nav-link" id="link-certs"><span class="lang-vi">Chứng chỉ</span><span class="lang-en">Certifications</span></a></li>
+                <li><a href="#pdf-cv" class="nav-link" id="link-pdf-cv"><span class="lang-vi">Hồ sơ CV</span><span class="lang-en">Resume</span></a></li>
             </ul>
         </nav>
 
@@ -36,8 +36,8 @@ const fallbackHeader = `
 
 const fallbackFooter = `
 <footer>
-    <p class="lang-vi">&copy; 2026 Bùi Dương Trí. Mọi quyền được bảo lưu.</p>
-    <p class="lang-en">&copy; 2026 Bui Duong Tri. All rights reserved.</p>
+    <p class="lang-vi">&copy; 2026 Bùi Dương Trí &bull; IT Support & Software Engineer &bull; Mọi quyền được bảo lưu.</p>
+    <p class="lang-en">&copy; 2026 Bui Duong Tri &bull; IT Support & Software Developer &bull; All Rights Reserved.</p>
 </footer>
 `;
 
@@ -108,7 +108,7 @@ function initHeaderLogic() {
         document.body.classList.remove("vi-mode", "en-mode");
         document.body.classList.add(lang + "-mode");
         localStorage.setItem("lang", lang);
-        
+
         if (langBtn) {
             if (lang === "vi") {
                 langBtn.innerHTML = "<i class='bx bx-globe'></i> EN";
@@ -157,7 +157,7 @@ function initHeaderLogic() {
         themeBtn.addEventListener("click", () => {
             let theme = document.documentElement.getAttribute("data-theme");
             let newTheme = theme === "dark" ? "light" : "dark";
-            
+
             document.documentElement.setAttribute("data-theme", newTheme);
             localStorage.setItem("theme", newTheme);
         });
@@ -195,19 +195,22 @@ function initHeaderLogic() {
 function initTypewriter() {
     const typewriterElement = document.getElementById("typewriter");
     if (typewriterElement) {
-        const wordsVi = ["Nhân viên hỗ trợ CNTT", "Kỹ sư Hỗ trợ Kỹ thuật"];
-        const wordsEn = ["IT Support Specialist", "IT Technical Support Engineer"];
-        
+        const wordsVi = ["Nhân viên hỗ trợ CNTT", "Kỹ sư Hỗ trợ Kỹ thuật", "Lập trình viên Phần mềm"];
+        const wordsEn = ["IT Support Specialist", "Technical Support Engineer", "Software Developer"];
+
         let wordIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
         let typingSpeed = 100;
-        let lastLang = "";
+        let lastLang = localStorage.getItem("lang") || "vi";
+
+        // Pre-populate with current language's first word to prevent initial flash
+        typewriterElement.textContent = lastLang === "vi" ? wordsVi[0] : wordsEn[0];
 
         function type() {
             const currentLang = localStorage.getItem("lang") || "vi";
             const words = currentLang === "vi" ? wordsVi : wordsEn;
-            
+
             // Smoothly reset and adapt typing when user switches languages dynamically
             if (lastLang !== currentLang) {
                 lastLang = currentLang;
@@ -276,7 +279,7 @@ function initPDFRenderer() {
                 const context = canvas.getContext("2d");
                 const scale = window.devicePixelRatio > 1.5 ? 2.0 : 1.5;
                 const viewport = page.getViewport({ scale: scale });
-                
+
                 canvas.height = viewport.height;
                 canvas.width = viewport.width;
 
@@ -308,9 +311,13 @@ function initPDFRenderer() {
         if (loader) {
             loader.innerHTML = `
                 <i class='bx bx-file-blank' style='font-size: 54px; color: var(--accent-color); margin-bottom: 12px;'></i>
-                <p style='font-size: 14px; font-weight: 500;'>Bản xem trước trực tiếp</p>
+                <p style='font-size: 14px; font-weight: 500;'>
+                    <span class='lang-vi'>Bản xem trước trực tiếp</span>
+                    <span class='lang-en'>Live Document Preview</span>
+                </p>
                 <span style='font-size: 12px; color: var(--text-muted); display: block; margin-top: 4px; line-height: 1.4; padding: 0 10px;'>
-                    Sẵn sàng xem và tải xuống.
+                    <span class='lang-vi'>Sẵn sàng xem và tải xuống.</span>
+                    <span class='lang-en'>Ready to view and download.</span>
                 </span>
             `;
             loader.style.opacity = "1";
