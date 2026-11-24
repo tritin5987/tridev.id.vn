@@ -384,11 +384,14 @@ function initCopyContact() {
     phoneButtons.forEach(btn => {
         btn.addEventListener("click", (e) => {
             e.preventDefault();
-            copyToClipboard(rawPhone).then(() => {
-                const isVi = document.body.classList.contains("vi-mode");
+            const isVi = document.body.classList.contains("vi-mode");
+            const phoneToCopy = isVi ? rawPhone : "+84988342551";
+            const phoneDisplay = isVi ? formattedPhone : "+84 988342551";
+
+            copyToClipboard(phoneToCopy).then(() => {
                 const toastMsg = isVi 
-                    ? `Đã sao chép số điện thoại: ${formattedPhone}` 
-                    : `Phone number copied: ${formattedPhone}`;
+                    ? `Đã sao chép số điện thoại: ${phoneDisplay}` 
+                    : `Phone number copied: ${phoneDisplay}`;
                 showToast(toastMsg);
 
                 // Inline visual feedback for contact channel button
